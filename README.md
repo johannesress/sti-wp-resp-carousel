@@ -1,4 +1,5 @@
-# ST Informatik - Wordpress Responsive Carousel v0.1
+# STI Wordpress Resp Carousel
+*v0.1*
 
 ## Installation
 
