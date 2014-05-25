@@ -2,16 +2,16 @@
 
 ## Installation
 
-* Clone or download repository to your wp-content/plugins folder
-* Activate plugin via Wordpress backend
+1. Clone or download repository to your wp-content/plugins folder
+2. Activate plugin via Wordpress backend
 
 ## Usage
 
-* Add a carousel (its like a category for carouselpages)
-* Add a couple of carouselpages and define the carousels they belong to
-* Use the shortcode in an Wordpress editor or in your theme
+1. Add a carousel (its like a category for carouselpages)
+2. Add a couple of carouselpages and define the carousels they belong to
+3. Use the shortcode in an Wordpress editor or in your theme
 
-### Editor
+**In Wordpress editor**
 ```
 [sti_carousel carousel_name="SLUG_OF_YOUR_CAROUSEL"]
 
@@ -20,9 +20,9 @@ or with optional size param
 [sti_carousel carousel_name="SLUG_OF_YOUR_CAROUSEL" image_size="NAME_OF_YOUR_THUMBNAIL_SIZE"]
 ```
 
-### Theme
+**In your theme**
 ```
-<?php do_shortcode('[sti_carousel carousel_name="SLUG_OF_YOUR_CAROUSEL"]');
+<?php do_shortcode('[sti_carousel carousel_name="SLUG_OF_YOUR_CAROUSEL"]'); ?>
 ```
 
 ## Tipps

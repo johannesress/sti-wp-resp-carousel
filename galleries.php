@@ -197,10 +197,11 @@ add_action('save_post', 'sti_carousel_meta_save', 1, 2);
 /***********************************************************************************************/
 /* Display Carousel Functionality */
 /***********************************************************************************************/
-function display_sti_carousel($atts, $image_size = 'sti-carousel-big') {
+function display_sti_carousel($atts) {
 
     extract(shortcode_atts(array(
       'carousel_name' => 'home'
+      'image_size' => 'sti-carousel-big'
     ), $atts));
 
     $args = array( 'post_type' => 'carouselpages', 'carousels' => $carousel_name, 'posts_per_page' => 100, 'orderby' => 'menu_order', 'order' => 'asc' );
