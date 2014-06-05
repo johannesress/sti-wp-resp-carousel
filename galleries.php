@@ -200,13 +200,32 @@ add_action('save_post', 'sti_carousel_meta_save', 1, 2);
 function display_sti_carousel($atts) {
 
     extract(shortcode_atts(array(
-      'carousel_name' => 'home'
-      'image_size' => 'sti-carousel-big'
+      'carousel_name' => 'home',
+      'image_size' => 'sti-carousel-big',
+      'fade' => 'false',
+      'autoplay' => 'false',
+      'arrows' => 'false',
+      'speed' => '500',
+      'autoplayspeed' => '1000',
+      'slidesToShow' => '1',
+      'slidesToScroll' => '1',
     ), $atts));
+
+    $slickArguments = "<script>".
+                    "window.slickAttrs = {".
+                    "'fade': ". $fade . ",".
+                    "'autoplay': ". $autoplay . ",".
+                    "'arrows': ". $arrows . ",".
+                    "'speed': ". $speed . ",".
+                    "'slidesToShow': ". $slidesToShow . ",".
+                    "'slidesToScroll': ". $slidesToScroll . ",".
+                    "'autoplaySpeed': ". $autoplayspeed .
+                    "}".
+                    "</script>";
 
     $args = array( 'post_type' => 'carouselpages', 'carousels' => $carousel_name, 'posts_per_page' => 100, 'orderby' => 'menu_order', 'order' => 'asc' );
 
-    $html = "<div class='sti-carousel-container'><div class='sti-carousel'>";
+    $html = $slickArguments . "<div class='sti-carousel-container'><div class='sti-carousel'>";
 
     $myposts = get_posts( $args );
 
@@ -244,7 +263,7 @@ function display_sti_carousel($atts) {
     
     wp_reset_postdata();
 
-    $html .= "</div><span class='sti-carousel-prev'><span class='icon-arrow-left'></span></span><span class='sti-carousel-next'><span class='icon-arrow-right'></span></span></div>";
+    $html .= "</div><span class='sti-carousel-prev'><span class='icon-arrow-left2'></span></span><span class='sti-carousel-next'><span class='icon-arrow-right2'></span></span></div>";
 
     return $html;
 }

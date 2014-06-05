@@ -11,6 +11,7 @@
 1. Add a carousel (its like a category for carouselpages)
 2. Add a couple of carouselpages and define the carousels they belong to
 3. Use the shortcode in an Wordpress editor or in your theme
+4. Add your own CSS for .sti-carousel-container , .sti-carousel-item , .sti-carousel-prev and .sti-carousel-next
 
 **In Wordpress editor**
 ```
