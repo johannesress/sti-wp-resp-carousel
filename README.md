@@ -20,6 +20,14 @@
 or with optional size param
 
 [sti_carousel carousel_name="SLUG_OF_YOUR_CAROUSEL" image_size="NAME_OF_YOUR_THUMBNAIL_SIZE"]
+
+all parameters
+
+image_size: name of a Worpress Thumbnail Size (define your own in functions.php)
+fade: true or false 
+autoplay: true or false 
+autoplayspeed: interval in ms for autoplay
+speed: speed of the transition in ms 
 ```
 
 **In your theme**
